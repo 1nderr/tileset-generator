@@ -14,19 +14,18 @@ image.
 
 ## Requirements
 
-- Python 3
-- Pillow
+- [uv](https://docs.astral.sh/uv/)
 
-Install dependencies with:
+uv installs Python and Pillow on the first run. To install them ahead of time:
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Usage
 
 ```bash
-python create_tileset.py path/to/level.png
+uv run tileset-generator.py path/to/level.png
 ```
 
 This creates `tileset.png` alongside `level.png`.
@@ -43,13 +42,13 @@ This creates `tileset.png` alongside `level.png`.
 Use a custom tile size (e.g. 32x32 tiles):
 
 ```bash
-python create_tileset.py path/to/level.png --tile-size 32
+uv run tileset-generator.py path/to/level.png --tile-size 32
 ```
 
 Arrange the output tileset with 8 columns instead of 10:
 
 ```bash
-python create_tileset.py path/to/level.png --columns 8
+uv run tileset-generator.py path/to/level.png --columns 8
 ```
 
 ## Notes
